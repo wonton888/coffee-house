@@ -1,0 +1,11 @@
+<?php
+
+function mymodule_menu() {
+    $items['path-to-ajax/%/%'] = array(
+        'access arguements' =>array('access content'),
+        'page callback' => 'mymodule_ajax_callback',
+        'page arguements' => array(1,2),
+        'type' => MENU_CALLBACK,
+    );
+    return $items;
+}
