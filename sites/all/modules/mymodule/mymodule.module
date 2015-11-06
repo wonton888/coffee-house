@@ -9,3 +9,11 @@ function mymodule_menu() {
     );
     return $items;
 }
+
+function mymodule_ajax_callback($js, $node_id) {
+    $node = node_load($node_id);
+
+    if ($js == 'nojs') {
+        drupal_goto('node/' . $node->nid);
+    }
+}
